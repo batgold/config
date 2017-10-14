@@ -1,82 +1,49 @@
-! xscreensaver ---------------------------------------------------------------
-
-!font settings
-xscreensaver.Dialog.headingFont:        -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont:           -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont:          -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont:          -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont:         -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont:           -*-dina-medium-r-*-*-10-*-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont:         -*-dina-bold-r-*-*-10-*-*-*-*-*-*-*
-!general dialog box (affects main hostname, username, password text)
-xscreensaver.Dialog.foreground:         #EDEDED
-xscreensaver.Dialog.background:         #202020
-xscreensaver.Dialog.topShadowColor:     #202024
-xscreensaver.Dialog.bottomShadowColor:  #202024
-xscreensaver.Dialog.Button.foreground:  #EDEDFF
-xscreensaver.Dialog.Button.background:  #444
-!username/password input box and date text colour
-xscreensaver.Dialog.text.foreground:    #EDEDFF
-xscreensaver.Dialog.text.background:    #444
-xscreensaver.Dialog.internalBorderWidth:24
-xscreensaver.Dialog.borderWidth:        0
-xscreensaver.Dialog.shadowThickness:    2
-!timeout bar (background is actually determined by Dialog.text.background)
-xscreensaver.passwd.thermometer.foreground:  #A9B7C4
-xscreensaver.passwd.thermometer.background:  #202020
-xscreensaver.passwd.thermometer.width:       8
-!datestamp format--see the strftime(3) manual page for details
-xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
-
-URxvt.allow_bold: true
 
 !disable ISO special modes with CTRL-SHFT
-URxvt.iso14755:     false
-URxvt.iso14755_52:  false
-URxvt.font: 	    xft:DejaVuSansMono:size=8
-URxvt.scrollBar:    False
+URxvt.iso14755:     	false
+URxvt.iso14755_52:  	false
 
-*.foreground:  #fffaf4
-*.background:  #0e1019
-*.cursorColor: #ff0018
+URxvt.allow_bold: 	true
+URxvt.font: 	    	xft:Inconsolata:size=10
+URxvt.scrollBar:    	False
 
-!URxvt.transparent:  true
-!URxvt.shading:      20
-!URxvt.fadeColor:    #FFFFFF
+*.foreground:  	#fffaf4
+!background:  	#0e1019
+*.background:  	#141f2e
+*.cursorColor: 	#3fe242
+*.cursorBlink:	true
 
-
-!
 ! Black
-*.color0:      #232323
-*.color8:      #444444
+*.color0:      #141f2e
+*.color8:      #000000
 !
-! Red
-*.color1:      #ff000f
-*.color9:      #ff2740
+! Red	dark/red
+*.color1:      #CC6666
+*.color9:      #FF8080
 !
-! Green
-*.color2:      #8ce10b
-*.color10:     #abe15b
+! Green	dark/green
+*.color2:      #50F050
+*.color10:      #A0FFA0
 !
 ! Yellow
-*.color3:      #ffb900
-*.color11:     #ffd242
+*.color3:      #F7FF66
+*.color11:     #EEF74C
 !
-! Blue
-*.color4:      #008df8
-*.color12:     #0092ff
+! Blue	NA/blue
+*.color4:      #000000
+*.color12:     #0099FF
 !
 ! Magenta
-*.color5:      #6d43a6
-*.color13:     #9a5feb
+*.color5:      #800080
+*.color13:     #B294BB
 !
-! Cyan
-*.color6:      #00d8eb
-*.color14:     #67fff0
+! Cyan	light/cyan
+*.color6:      #000000
+*.color14:     #8ABEB7
 !
 ! White
-*.color7:      #ffffff
-*.color15:     #ffffff
+*.color7:      #FFFFFF
+*.color15:     #FFFFFF
 !
 ! Bold, Italic, Underline
 *.colorBD:     #9e9c9a

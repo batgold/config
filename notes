@@ -1,0 +1,43 @@
+manage login page with lightdm: see archlinux.org LightDM
+use zsh
+update lid closing with /etc/systemd/logind.conf
+use xfce-power-manager to set suspend on lid close: also 
+use nm-applet to see wifi, right click icon
+use nm-connection editor too
+
+wallpaper img lives: /usr/share/wallpapers/..
+
+install git
+install rtl-sdr
+make a GIT path. figure out where to put git files. maybe /var/git. or ~/git/
+rtl-sdr -- osmocom
+rtl-sdr >> /opt/
+vim - setup .vimrc configurations for python etc.
+vimcolors.com
+move vim colorscheme files to /.vim/colors
+
+rtl-sdr and dump1090 binaries live in /usr/local/bin
+rtl-sdr header files live in /usr/local/include *.h
+rtl-sdr libraries live in /usr/local/lib
+
+****move rtl-sdr to proper location, see above.
+   perhaps put dump1090 in /usr/local/bin
+   rtl-sdr.h lives in /usr/local/include  **put this in path
+   the rtl binaries live in /usr/local/bin
+
+python libraries live in /usr/local/lib
+
+check out: 
+tilda
+
+bin desk docs dwnld img music public 
+
+****for usb ctrl
+
+lsblk -- list devices
+
+udisksctl unmount -b /dev/*sdc1*
+udisksctl power-off -b /dev/*sdc1*
+
+downloaded packages live in /usr/local/src
+

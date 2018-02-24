@@ -79,10 +79,6 @@ focus_on_window_activation focus
 # focus follows mouse
 focus_follows_mouse no
 
-# hide border if only one window
-hide_edge_borders both
-#hide_edge_borders 1
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -100,18 +96,39 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-#allows forced window positions, without showing value
+new_window normal 0 px
 
+# COLORS
+set $black #0E1019
+set $white #FFFFFF
+set $red	#FF0000
+
+# COLORS			border	backgr.	text	indic	child_border
+client.focused			$white	$white	$black  $red	$red
+#client.focused_inactive		$red	$red	$red  $red	$red
+client.unfocused		$white	$black	$white  $red	$red
+#client.urgent			$black	$black	$white  $black	$black
+#client.placeholder		$black	$black	$white  $black	$black
+#client.background		$black
+
+# hide border if only one window
+hide_edge_borders both
+#hide_edge_borders 1
+
+
+#allows forced window positions, without showing value
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1 
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -122,8 +139,8 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -131,12 +148,15 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # start a terminal; and switch to it
-bindsym $mod+Return exec urxvt; workspace $ws1
+bindsym $mod+Return exec urxvt
+#bindsym $mod+Return exec urxvt; workspace $ws1
 #bindsym $mod+Return exec i3-sensible-terminal; workspace $ws1
 
 assign [class="Xfce4-terminal"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="HardwareSimulatorMain"] $ws3
+assign [class="Shotwell"] $ws4
+assign [class="Gimp"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -176,7 +196,11 @@ bindsym $mod+r mode "resize"
 bar {
 	strip_workspace_numbers yes
 	colors {
-		background #0e1019
+		background 	#0e1019
+		separator	#FFFFFF
+		#class			#border		#backgr.	#text
+		focused_workspace 	$black		$white		$black
+		inactive_workspace	$black		$black		$white
 
 	}
 #        status_command i3status
@@ -201,7 +225,7 @@ bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 #https://cialu.net/brightness-control-not-work-i3wm/
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+# bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
 #bindsym XF86AudioPlay exec playerctl play
@@ -209,7 +233,7 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
 
-exec_always feh --no-fehbg --bg-scale ~/usr/share/wallpapers/wall.png
+exec_always feh --no-fehbg --bg-scale /usr/share/wallpapers/wall_dark.png
 #exec_always i3-sensible-terminal
 #exec_always firefox
 exec xfce4-power-manager

@@ -7,23 +7,27 @@ URxvt.allow_bold: 	true
 URxvt.font: 	    	xft:Inconsolata:size=10
 URxvt.scrollBar:    	False
 
+!URxvt.transparent:	true
+!URxvt.shading:		0
+
 *.foreground:  	#fffaf4
-!background:  	#0e1019
-*.background:  	#141f2e
+!*.background:  	#141f2e
+*.background:	#0e1019
 *.cursorColor: 	#3fe242
 *.cursorBlink:	true
 
 ! Black
-*.color0:      #141f2e
+*.color0:      #0e1019
+!*.color0:      #141f2e
 *.color8:      #000000
 !
 ! Red	dark/red
 *.color1:      #CC6666
 *.color9:      #FF8080
 !
-! Green	dark/green
-*.color2:      #50F050
-*.color10:      #A0FFA0
+! Green	green/dark
+*.color10:      #50F050
+*.color2:      #A0FFA0
 !
 ! Yellow
 *.color3:      #F7FF66
@@ -34,12 +38,12 @@ URxvt.scrollBar:    	False
 *.color12:     #0099FF
 !
 ! Magenta
-*.color5:      #800080
-*.color13:     #B294BB
+*.color13:      #D147D1
+*.color5:     #B230B2
 !
 ! Cyan	light/cyan
 *.color6:      #000000
-*.color14:     #8ABEB7
+*.color14:     #91CCFF
 !
 ! White
 *.color7:      #FFFFFF

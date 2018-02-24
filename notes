@@ -6,6 +6,7 @@ use nm-applet to see wifi, right click icon
 use nm-connection editor too
 
 wallpaper img lives: /usr/share/wallpapers/..
+set in i3/config file, at the end
 
 install git
 install rtl-sdr
@@ -40,4 +41,27 @@ udisksctl unmount -b /dev/*sdc1*
 udisksctl power-off -b /dev/*sdc1*
 
 downloaded packages live in /usr/local/src
+----ZSH----
+change zcompdump location, line 10
 
+# Save the location of the current completion dump file.
+if [ -z "$ZSH_COMPDUMP" ]; then
+  ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.oh-my-zsh/cache/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+fi
+
+
+----GIT-----
+git init
+git add <file> <*>
+git commit -m "MESSAGE"
+git remote add origin 
+git remote -v (verify remote url)
+git remote rm origin (to begin again)
+git push origin master
+
+---KEYBOARD----
+change CAPSLOCK to CTRL
+sudo vim /etc/default/keyboard
+XKBOPTIONS="ctrl:swapcaps"
+
+duo dpkg-recongiure keyboard-configuration

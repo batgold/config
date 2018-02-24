@@ -1,5 +1,20 @@
 set nocompatible 			" do not confuse with vi
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'davidhalter/jedi-vim'
+
+call vundle#end()            " required
+
+" stop autocomplete doc window from opening, from jedi-vim
+autocmd FileType python setlocal completeopt-=preview
+autocmd VimEnter * set autochdir	" automatically change dir to current
+
 set t_Co=16				" set 16 colors
 
 syntax enable
@@ -8,8 +23,9 @@ filetype plugin indent on 		" detection = on, plugin = on, indent = on
 
 colorscheme torte2
 
-set autoindent			"not sure if i like this
+set autoindent				" keep indentation from previous line
 set background 	=dark			" use light colors on dark background
+set textwidth	=0
 "set clipboard	=unnamed		" use clipboard register '*'
 "set cursorline				" show vertical position of cursor
 set display	=lastline		" show as much as possible of last line; prevent @ display
@@ -35,17 +51,41 @@ set wildmenu 				" display all matching files when tab-complete
 set ttyfast				" TRY THESE FOR WINDOW SWITCHING ISSUES
 set nottyfast
 
+"FOLDING
+set foldmethod	=indent			" folding based on indentation
+
+" Beginning
 nnoremap B ^
 xnoremap B ^
-nnoremap E $
-xnoremap E $
-
 nnoremap ^ <nop>
 xnoremap ^ <nop>
+
+" End
+nnoremap E $
+xnoremap E $
 nnoremap $ <nop>
 xnoremap $ <nop>
 
-nnoremap <bs> X
+" Remap ESC
+nnoremap <C-@> <Esc>
+inoremap <C-@> <Esc>`^
+vnoremap <C-@> <Esc>
+xnoremap <C-@> <Esc>
+cnoremap <C-@> <C-C><Esc>
+
+" End Search Highlighting
+nnoremap <CR> :noh<CR><CR>:<backspace>
+
+" map backspace to X when in normal mode, not needed
+" nnoremap <bs> X  
 
 let python_highlight_all=1
 "highlight LineNr ctermfg=DarkGray
+
+" unmap <C-Space> from completion command
+let g:jedi#completions_command = ""
+
+" set cursor to I,_,[] for insert,replace,normal mode
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"

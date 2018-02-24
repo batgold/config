@@ -83,7 +83,10 @@ let python_highlight_all=1
 "highlight LineNr ctermfg=DarkGray
 
 " unmap <C-Space> from completion command
-let g:jedi#completions_command = ""
+let g:jedi#completions_command=""
+
+" stop networks read-write history logging
+let g:netrw_dirhistmax=0
 
 " set cursor to I,_,[] for insert,replace,normal mode
 let &t_SI = "\<Esc>[6 q"

@@ -79,6 +79,9 @@ nnoremap <CR> :noh<CR><CR>:<backspace>
 " map backspace to X when in normal mode, not needed
 " nnoremap <bs> X  
 
+" add header to python files
+au BufNewFile *.py 0r ~/.vim/ftplugin/pyhead
+
 let python_highlight_all=1
 "highlight LineNr ctermfg=DarkGray
 
@@ -92,3 +95,13 @@ let g:netrw_dirhistmax=0
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
+
+set viminfo=%,<800,'10,/50,:100,h,f0,n~/.vim/.viminfo
+"           | |    |   |   |    | |  + viminfo file path
+"           | |    |   |   |    | + file marks 0-9,A-Z 0=NOT stored
+"           | |    |   |   |    + disable 'hlsearch' loading viminfo
+"           | |    |   |   + command-line history saved
+"           | |    |   + search history saved
+"           | |    + files marks saved
+"           | + lines saved each register (old name for <, vi6.2)
+"           + save/restore buffer list

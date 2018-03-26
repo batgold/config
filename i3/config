@@ -115,13 +115,17 @@ client.unfocused		$white	$black	$white  $red	$red
 hide_edge_borders both
 #hide_edge_borders 1
 
-
 #allows forced window positions, without showing value
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
+#terminal
+set $ws1 "1:"	
+#firefox
+set $ws2 "2:"	
+#nand2tetris
+set $ws3 "3:"	
+#shotwell
+set $ws4 "4:"	
+#gimp
+set $ws5 "5:"	
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1 

@@ -1,27 +1,28 @@
 set nocompatible 			" do not confuse with vi
 
+" -----VUNDLE-----
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()            " required
+" -----END VUNDLE-----
 
 " stop autocomplete doc window from opening, from jedi-vim
 autocmd FileType python setlocal completeopt-=preview
 autocmd VimEnter * set autochdir	" automatically change dir to current
 
-set t_Co=16				" set 16 colors
+set t_Co=256				" set 16 colors
 
 syntax enable
 filetype detect				" detect filtype within new file without extension
 filetype plugin indent on 		" detection = on, plugin = on, indent = on
 
-colorscheme torte2
+colorscheme bertvim
 
 set autoindent				" keep indentation from previous line
 set background 	=dark			" use light colors on dark background
@@ -83,7 +84,6 @@ nnoremap <CR> :noh<CR><CR>:<backspace>
 au BufNewFile *.py 0r ~/.vim/ftplugin/pyhead
 
 let python_highlight_all=1
-"highlight LineNr ctermfg=DarkGray
 
 " unmap <C-Space> from completion command
 let g:jedi#completions_command=""

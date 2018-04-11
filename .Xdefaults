@@ -1,57 +1,76 @@
-
+urxvt.customization:	-color
+XTerm*termName:	xterm-256color
 !disable ISO special modes with CTRL-SHFT
 URxvt.iso14755:     	false
 URxvt.iso14755_52:  	false
 
-URxvt.allow_bold: 	true
-URxvt.font: 	    	xft:Inconsolata:size=10
-URxvt.scrollBar:    	False
+urxvt.allow_bold: 	true
+urxvt.font: 	    	xft:Inconsolata:size=10
+urxvt.scrollBar:    	False
 
 !URxvt.transparent:	true
 !URxvt.shading:		0
 
-*.foreground:  	#fffaf4
-!*.background:  	#141f2e
-*.background:	#0e1019
-*.cursorColor: 	#3fe242
-*.cursorBlink:	true
+urxvt.foreground:  	#E7E7F1
+urxvt.background:	#0E1019
+urxvt.cursorColor: 	#00FF77
+urxvt.cursorBlink:	true
 
-! Black
-*.color0:      #0e1019
-!*.color0:      #141f2e
-*.color8:      #000000
-!
-! Red	dark/red
-*.color1:      #CC6666
-*.color9:      #FF8080
-!
-! Green	green/dark
-*.color10:      #50F050
-*.color2:      #A0FFA0
-!
-! Yellow
-*.color3:      #F7FF66
-*.color11:     #EEF74C
-!
-! Blue	NA/blue
-*.color4:      #000000
-*.color12:     #0099FF
-!
-! Magenta
-*.color13:      #D147D1
-*.color5:     #B230B2
-!
-! Cyan	light/cyan
-*.color6:      #000000
-*.color14:     #91CCFF
-!
-! White
-*.color7:      #FFFFFF
-*.color15:     #FFFFFF
-!
-! Bold, Italic, Underline
-*.colorBD:     #9e9c9a
-!*.colorIT:
-!*.colorUL:
+!NR-16   NR-8    COLOR NAME ~
+!0	    0	    Black
+!1	    4	    DarkBlue
+!2	    2	    Light Green
+!3	    6	    DarkCyan
+!4	    1	    DarkRed
+!5	    5	    DarkMagenta
+!6	    3	    Brown, DarkYellow
+!7	    7	    LightGray, LightGrey, Gray, Grey
+!8	    0*	    DarkGray, DarkGrey
+!9	    4*	    Blue, LightBlue
+!10	    2*	    Green
+!11	    6*	    Cyan, LightCyan
+!12	    1*	    Red, LightRed
+!13	    5*	    Magenta, LightMagenta
+!14	    3*	    Yellow, LightYellow
+!15	    7*	    White
+
+!verify colors with ./bin/terminal-colors -n
+!green, blue are swapped for desired terminal colors
+!black
+urxvt.color0:      	#0E1019
+!dark red
+urxvt.color1:      	#C72727
+!dark green
+urxvt.color10:     	#00FF77
+!dark yellow
+urxvt.color3:      	#FFDD00
+!dark blue
+urxvt.color12:      	#0099FF
+!dark magenta
+urxvt.color5:     	#7700FF
+!dark cyan
+urxvt.color6:      	#00BBBB
+!light gray
+urxvt.color7:      	#333C66
+!dark gray
+urxvt.color8:      	#666C82
+!red
+urxvt.color9:     	#FF8080
+!green
+urxvt.color2:      	#77FFB6
+!yellow
+urxvt.color11:     	#FFFF77
+!blue
+urxvt.color4:		#77C9FF
+!magenta
+urxvt.color13:      	#B777FF
+!cyan
+urxvt.color14:      	#77FFFF
+!white
+urxvt.color15:     	#E7E7F1
+
+!urxvt.colorBD:
+!urxvt.colorIT:
+!urxvt.colorUL:
 
 

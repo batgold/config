@@ -99,14 +99,14 @@ bindsym $mod+a focus parent
 new_window normal 0 px
 
 # COLORS
-set $black #0E1019
-set $white #FFFFFF
-set $red	#FF0000
+set $black 	#0E1019
+set $white 	#E7E7F1
+set $red   	#FF0000
 
 # COLORS			border	backgr.	text	indic	child_border
 client.focused			$white	$white	$black  $red	$red
 #client.focused_inactive		$red	$red	$red  $red	$red
-client.unfocused		$white	$black	$white  $red	$red
+client.unfocused		$black	$black	$white  $red	$red
 #client.urgent			$black	$black	$white  $black	$black
 #client.placeholder		$black	$black	$white  $black	$black
 #client.background		$black
@@ -120,12 +120,13 @@ hide_edge_borders both
 set $ws1 "1:"	
 #firefox
 set $ws2 "2:"	
-#nand2tetris
-set $ws3 "3:"	
-#shotwell
+#radio
+set $ws3 "3:"	
+#photo
 set $ws4 "4:"	
-#gimp
-set $ws5 "5:"	
+#nand2tetris
+set $ws5 "3:"	
+#gimp 	
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1 
@@ -133,11 +134,6 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -145,11 +141,6 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
 
 # start a terminal; and switch to it
 bindsym $mod+Return exec urxvt
@@ -158,9 +149,11 @@ bindsym $mod+Return exec urxvt
 
 assign [class="Xfce4-terminal"] $ws1
 assign [class="Firefox"] $ws2
-assign [class="HardwareSimulatorMain"] $ws3
+assign [class="gqrx"] $ws3
+assign [class="wxtoimg"] $ws3
 assign [class="Shotwell"] $ws4
-assign [class="Gimp"] $ws5
+assign [class="Gimp"] $ws4
+assign [class="HardwareSimulatorMain"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

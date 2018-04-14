@@ -52,8 +52,9 @@ urxvt.color5:     	#7700FF
 urxvt.color6:      	#00BBBB
 !light gray
 urxvt.color7:      	#333C66
-!dark gray
-urxvt.color8:      	#666C82
+!dark gray (use black)
+urxvt.color8:      	#0E1019
+!urxvt.color8:      	#666C82
 !red
 urxvt.color9:     	#FF8080
 !green

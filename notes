@@ -23,6 +23,7 @@ move vim colorscheme files to /.vim/colors
 rtl-sdr and dump1090 binaries live in /usr/local/bin
 rtl-sdr header files live in /usr/local/include *.h
 rtl-sdr libraries live in /usr/local/lib
+rtl-sdr blacklist live in /etc/modprobe.d/
 
 ****move rtl-sdr to proper location, see above.
    perhaps put dump1090 in /usr/local/bin

@@ -8,6 +8,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'tmhedberg/SimpylFold'
 
 call vundle#end()            " required
 " -----END VUNDLE-----
@@ -87,6 +88,9 @@ let python_highlight_all=1
 
 " unmap <C-Space> from completion command
 let g:jedi#completions_command=""
+
+" Show docstring in fold line
+let g:SimpylFold_docstring_preview=1
 
 " stop networks read-write history logging
 let g:netrw_dirhistmax=0

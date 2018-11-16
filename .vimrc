@@ -78,6 +78,10 @@ cnoremap <C-@> <C-C><Esc>
 " End Search Highlighting
 nnoremap <CR> :noh<CR><CR>:<backspace>
 
+" Move to latest buffer
+nnoremap <C-B> :b#<CR>
+" alos consider mapping CJ & CK to :bnext & :bprev
+
 " map backspace to X when in normal mode, not needed
 " nnoremap <bs> X  
 

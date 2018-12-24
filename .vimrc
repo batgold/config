@@ -80,10 +80,17 @@ nnoremap <CR> :noh<CR><CR>:<backspace>
 
 " Move to latest buffer
 nnoremap <C-B> :b#<CR>
-" alos consider mapping CJ & CK to :bnext & :bprev
+" also consider mapping CJ & CK to :bnext & :bprev
 
 " map backspace to X when in normal mode, not needed
 " nnoremap <bs> X  
+
+" Enclose word in quotes
+let mapleader = ","
+nnoremap <leader>q" ciw""<Esc>P
+nnoremap <leader>q' ciw''<Esc>P
+" Remove enclosing quotes
+nnoremap <leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 
 " add header to python files
 au BufNewFile *.py 0r ~/.vim/ftplugin/pyhead

@@ -3,6 +3,7 @@
 
 # Include my personal binary script files
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh

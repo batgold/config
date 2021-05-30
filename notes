@@ -64,6 +64,11 @@ git remote -v (verify remote url)
 git remote rm origin (to begin again)
 git push origin master
 
+$KEY$ 
++ double-click to select all
++ double-finger hold, click to copy
++ fn-shift-enter to paste
+
 ---KEYBOARD----
 change CAPSLOCK to CTRL
 sudo vim /etc/default/keyboard
@@ -71,13 +76,10 @@ XKBOPTIONS="ctrl:swapcaps"
 
 duo dpkg-recongiure keyboard-configuration
 
-
 ---i3----
 change login avatar:
 https://wiki.archlinux.org/index.php/LightDM
 put new image (name=ben, as png) into /var/lib/AccountService/icons/
-
-
 
 
 ---software---

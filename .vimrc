@@ -97,6 +97,9 @@ au BufNewFile *.py 0r ~/.vim/ftplugin/pyhead
 
 let python_highlight_all=1
 
+" default highlighting
+au BufNewFile,BufRead * if &syntax == '' | set syntax=note | endif
+
 " unmap <C-Space> from completion command
 let g:jedi#completions_command=""
 

@@ -63,6 +63,7 @@ git remote add origin
 git remote -v (verify remote url)
 git remote rm origin (to begin again)
 git push origin master
+test
 
 $KEY$ 
 + double-click to select all
